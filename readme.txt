@@ -1,7 +1,7 @@
 === Local Avatars by Nocksoft ===
 Contributors: nocksoft
 Tags: local avatar, avatar, gravatar
-Stable tag: 0.0.0
+Stable tag: 1.0.0
 Requires at least: 5.3
 Tested up to: 6.0
 License: GPLv2 or later
@@ -46,7 +46,7 @@ You can adjust settings in the user profile settings and in the global settings 
 
 == Changelog ==
 
-= 0.0.0 =
+= 1.0.0 =
 * First release
 
 == Screenshots ==
