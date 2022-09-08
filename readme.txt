@@ -48,6 +48,7 @@ You can adjust settings in the user profile settings and in the global settings 
 
 = 1.x.x =
 * Fixed a bug that caused global settings heading do not show
+* Fixed a bug that caused an error during uninstall
 
 = 1.0.0 =
 * First release

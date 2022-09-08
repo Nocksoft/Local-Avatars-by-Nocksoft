@@ -27,9 +27,6 @@ function nstla_activate_plugin() {
 
 /* https://developer.wordpress.org/plugins/plugin-basics/uninstall-methods/ */
 function nstla_uninstall_plugin() {
-	if (!defined("WP_UNINSTALL_PLUGIN")) {
-		die;
-	}
 	
 	delete_option("nstla_setting_redirectgravatar_all");
 	delete_option("nstla_setting_localavatar_default");
