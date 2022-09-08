@@ -29,7 +29,7 @@ function nstla_globalsettings() {
 	$tab = isset($_GET["tab"]) ? sanitize_text_field($_GET["tab"]) : null;
     ?>
     <div class="wrap">
-        <h1><?php esc_html(get_admin_page_title()); ?></h1>
+        <h1><?php echo get_admin_page_title(); ?></h1>
 		
 		<p><?php echo __("User-specific settings are made in your user profile in WordPress (Users -> Your Profile -> Edit). General settings can be made here.", "local-avatars-by-nocksoft"); ?></p>
 		
