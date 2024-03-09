@@ -2,7 +2,7 @@
 
 /*
 	Plugin Name: Local Avatars by Nocksoft
-	Version: 1.0.0
+	Version: 1.0.1
 	Author: Rafael Nockmann @ Nocksoft
 	Author URI: https://nocksoft.de
 	Plugin URI: https://github.com/Nocksoft/Local-Avatars-by-Nocksoft

@@ -1,7 +1,7 @@
 === Local Avatars by Nocksoft ===
 Contributors: nocksoft
 Tags: local avatar, avatar, gravatar
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires at least: 5.3
 Tested up to: 6.5
 License: GPLv2 or later
@@ -50,7 +50,7 @@ You can adjust settings in the user profile settings and in the global settings 
 
 == Changelog ==
 
-= 1.x.x =
+= 1.0.1 =
 * Fixed a bug that caused global settings heading do not show
 * Fixed a bug that caused an error during uninstall
 * Added option for custom default avatars in global settings
