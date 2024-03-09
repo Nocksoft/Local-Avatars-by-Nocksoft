@@ -16,6 +16,7 @@ function nstla_settings_page() {
 add_action("admin_init", function() {
 	register_setting("nstla_settings_general", "nstla_setting_redirectgravatar_all", "boolval");
 	register_setting("nstla_settings_general", "nstla_setting_localavatar_default");
+	register_setting("nstla_settings_general", "nstla_setting_localavatar_default_custom_url");
 });
 
 
@@ -25,6 +26,7 @@ function nstla_globalsettings() {
 
 	global $nstla_setting_redirectgravatar_all;
 	global $nstla_setting_localavatar_default;
+	global $nstla_setting_localavatar_default_custom_url;
 	
 	$tab = isset($_GET["tab"]) ? sanitize_text_field($_GET["tab"]) : null;
     ?>
@@ -60,10 +62,14 @@ function nstla_globalsettings() {
 							<?php
 								$pingu = plugin_dir_url(__DIR__) . "img/local-avatar-pingu.png";
 								$mystery = plugin_dir_url(__DIR__) . "img/local-avatar-mystery.png";
+								$custom = $nstla_setting_localavatar_default_custom_url;
 							?>
 							<p class="defaultavatarpicker">
-								<input type="radio" name="nstla_setting_localavatar_default" value="pingu" <?php checked($nstla_setting_localavatar_default, "pingu"); ?> /><img id="nstla_avatar" class="avatar" width="48" height="48" src="<?php echo esc_url($pingu); ?>"><br>
-								<input type="radio" name="nstla_setting_localavatar_default" value="mystery" <?php checked($nstla_setting_localavatar_default, "mystery"); ?> /><img id="nstla_avatar" class="avatar" width="48" height="48" src="<?php echo esc_url($mystery); ?>">
+								<input type="radio" name="nstla_setting_localavatar_default" value="pingu" <?php checked($nstla_setting_localavatar_default, "pingu"); ?> /><img id="nstla_avatar_pingu" class="avatar" width="48" height="48" src="<?php echo esc_url($pingu); ?>"><br>
+								<input type="radio" name="nstla_setting_localavatar_default" value="mystery" <?php checked($nstla_setting_localavatar_default, "mystery"); ?> /><img id="nstla_avatar_mystery" class="avatar" width="48" height="48" src="<?php echo esc_url($mystery); ?>"><br>
+								<input type="radio" name="nstla_setting_localavatar_default" value="custom" <?php checked($nstla_setting_localavatar_default, "custom"); ?> /><img id="nstla_avatarimg" class="avatar" width="48" height="48" src="<?php echo esc_url($custom); ?>">
+									<input type="hidden" id="nstla_avatarinput" name="nstla_setting_localavatar_default_custom_url" class="regular-text" value="<?php echo esc_url($nstla_setting_localavatar_default_custom_url); ?>" avatarid="<?php echo attachment_url_to_postid($nstla_setting_localavatar_default_custom_url); ?>" />
+									<input type="button" id="nstla_setavatar" class="button" value="<?php echo __("Choose Avatar", "local-avatars-by-nocksoft"); ?>"/>
 							</p>
 						</td>
 						</tr>

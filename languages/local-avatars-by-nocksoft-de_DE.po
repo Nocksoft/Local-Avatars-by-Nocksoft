@@ -6,23 +6,27 @@ msgstr "F&uuml;gt Support f&uuml;r lokale Avatare hinzu."
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: settings-global.php:34
+#: settings-global.php:36
 msgid "User-specific settings are made in your user profile in WordPress (Users -> Your Profile -> Edit). General settings can be made here."
 msgstr "Benutzerspezifische Einstellungen werden in deinem Benutzerprofil get&auml;tigt (Benutzer -> Dein Profil -> Bearbeiten). Allgemeine Einstellungen k&ouml;nnen hier vorgenommen werden."
 
-#: settings-global.php:37
+#: settings-global.php:39
 msgid "General"
 msgstr "Allgemein"
 
-#: settings-global.php:55
+#: settings-global.php:57
 msgid "Gravatar"
 msgstr "Gravatar"
 
-#: settings-global.php:58
+#: settings-global.php:60
 msgid "Redirect all Gravatar requests to local avatars (choose default avatar below)"
 msgstr "Leite alle Gravatar-Anfragen auf lokale Avatare um (w&auml;hle unten einen Standardavatar)"
 
-#: settings-global.php:77
+#: settings-global.php:72
+msgid "Choose Avatar"
+msgstr "Avatar w&auml;hlen"
+
+#: settings-global.php:83
 msgid "Save Settings"
 msgstr "Einstellungen speichern"
 

@@ -32,6 +32,10 @@ You have two options. Either through Gravatar, or you can specify a local image 
 
 You can do this in the global settings of this plugin. Just tick the corresponding checkbox.
 
+= When I disabled Gravatar, can I force a custom default avatar? =
+
+Yes, just choose a custom avatar of your choice in the global settings under "Settings" -> "Local Avatars".
+
 = Where can I make settings for this plugin? =
 
 You can adjust settings in the user profile settings and in the global settings under "Settings" -> "Local Avatars".
@@ -49,6 +53,7 @@ You can adjust settings in the user profile settings and in the global settings 
 = 1.x.x =
 * Fixed a bug that caused global settings heading do not show
 * Fixed a bug that caused an error during uninstall
+* Added option for custom default avatars in global settings
 
 = 1.0.0 =
 * First release

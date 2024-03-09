@@ -78,12 +78,16 @@ add_filter("get_avatar_url", "nstla_redirect_gravatar");
 function nstla_redirect_gravatar($url) {
 	global $nstla_setting_redirectgravatar_all;
 	global $nstla_setting_localavatar_default;
+	global $nstla_setting_localavatar_default_custom_url;
 	
 	if ($nstla_setting_redirectgravatar_all == true
 		&& strpos($url, "gravatar.com") !== false) {
 			
 			if (in_array($nstla_setting_localavatar_default, array("pingu", "mystery"))) {
 				$url = plugin_dir_url(__DIR__) . "img/local-avatar-$nstla_setting_localavatar_default.png";
+			}
+			else if ($nstla_setting_localavatar_default == "custom") {
+				$url = $nstla_setting_localavatar_default_custom_url;
 			}
 			else {
 				global $nstla_setting_default_localavatar_default;

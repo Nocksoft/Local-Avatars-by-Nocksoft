@@ -5,6 +5,7 @@ function nstla_activate_plugin() {
 	
 	add_option("nstla_setting_redirectgravatar_all", $nstla_setting_default_redirectgravatar_all);
 	add_option("nstla_setting_localavatar_default", $nstla_setting_default_localavatar_default);
+	add_option("nstla_setting_localavatar_default_custom_url", $nstla_setting_default_localavatar_default_custom_url);
 	
 	/* Migrate user settings from Author Box by Nocksoft */
 	$users = get_users();
@@ -30,6 +31,7 @@ function nstla_uninstall_plugin() {
 	
 	delete_option("nstla_setting_redirectgravatar_all");
 	delete_option("nstla_setting_localavatar_default");
+	delete_option("nstla_setting_localavatar_default_custom_url");
 	
 	/* Clear user settings */
     $users = get_users();

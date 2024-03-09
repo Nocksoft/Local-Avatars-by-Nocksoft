@@ -23,9 +23,9 @@ function nstla_usersettings($user) {
                     $avatarurl = nstla_get_avatarurl($user->ID, true, true);
                     $gravatarurl = nstla_get_gravatar_url($user->ID);
                 ?>
-                <p><img id="nstla_avatar" loading="lazy" width="96" height="96" src="<?php echo esc_url($avatarurl); ?>"></p>
-                <p><input type="text" id="nstla_setting_avatarurl" name="nstla_setting_avatarurl" class="regular-text" placeholder="<?php echo __("Avatar URL (e.g. https://yoursite.com/avatar.jpg) -> will be filled automatically", "local-avatars-by-nocksoft"); ?>" value="<?php echo esc_url($avatarurl); ?>" gravatarurl="<?php echo esc_url($gravatarurl); ?>" /></p>
-                <p style="display: none;"><input type="hidden" id="nstla_setting_avatarid" name="nstla_setting_avatarid" class="regular-text" value="<?php echo attachment_url_to_postid($avatarurl); ?>" /></p>
+                <p><img id="nstla_avatarimg" loading="lazy" width="96" height="96" src="<?php echo esc_url($avatarurl); ?>"></p>
+                <p><input type="text" id="nstla_avatarinput" name="nstla_setting_avatarurl" class="regular-text" placeholder="<?php echo __("Avatar URL (e.g. https://yoursite.com/avatar.jpg) -> will be filled automatically", "local-avatars-by-nocksoft"); ?>" value="<?php echo esc_url($avatarurl); ?>"
+                    gravatarurl="<?php echo esc_url($gravatarurl); ?>" avatarid="<?php echo attachment_url_to_postid($avatarurl); ?>" /></p>
                 <p class="description"><?php echo __("Please select an avatar using the button below (square avatars are recommended). Gravatar may be used as fallback.", "local-avatars-by-nocksoft"); ?></p>
                 <p>
                     <input type="button" id="nstla_setavatar" class="button" value="<?php echo __("Choose Avatar", "local-avatars-by-nocksoft"); ?>"/>

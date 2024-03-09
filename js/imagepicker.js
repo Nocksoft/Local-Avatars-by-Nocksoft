@@ -2,9 +2,8 @@
 	if (!document.body.contains(document.getElementById("nstla_setavatar"))) return;
 	
 	
-	var img = document.getElementById("nstla_avatar");
-	var inputUrl = document.getElementById("nstla_setting_avatarurl");
-	var inputId = document.getElementById("nstla_setting_avatarid");
+	var img = document.getElementById("nstla_avatarimg");
+	var input = document.getElementById("nstla_avatarinput");
 
 	var imagepicker = wp.media({
 		library : {
@@ -23,12 +22,12 @@
 	imagepicker.on("select", function() {
 		var image = imagepicker.state().get("selection").first().toJSON();
 		img.setAttribute("src", image.url);
-		inputUrl.setAttribute("value", image.url);
-		inputId.setAttribute("value", image.id);
+		input.setAttribute("value", image.url);
+		input.setAttribute("avatarid", image.id);
 	});
 
 	imagepicker.on("open", function() {
-		var id = inputId.getAttribute("value");
+		var id = input.getAttribute("avatarid");
 		if (id) {
 			var selection = imagepicker.state().get("selection");
 			attachment = wp.media.attachment(id);
@@ -37,10 +36,12 @@
 		}
 	});
 
-	document.getElementById("nstla_deleteavatar").addEventListener("click", function() {
-		var url = inputUrl.getAttribute("gravatarurl");
-		img.setAttribute("src", url);
-		inputUrl.setAttribute("value", url);
-	});
+	if (document.body.contains(document.getElementById("nstla_deleteavatar"))) {
+		document.getElementById("nstla_deleteavatar").addEventListener("click", function() {
+			var url = input.getAttribute("gravatarurl");
+			img.setAttribute("src", url);
+			input.setAttribute("value", url);
+		});
+	}
 
 })();
