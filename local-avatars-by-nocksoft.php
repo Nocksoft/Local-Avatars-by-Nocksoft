@@ -3,7 +3,7 @@
 /*
 	Plugin Name: Local Avatars by Nocksoft
 	Version: 1.0.1
-	Author: Rafael Nockmann @ Nocksoft
+	Author: Rafael @ Nocksoft
 	Author URI: https://nocksoft.de
 	Plugin URI: https://github.com/Nocksoft/Local-Avatars-by-Nocksoft
 	Description: Adds support for local avatars.
